@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="create">
        <div class="box has-background-danger" v-if="apiErrors.length!=0">
          <ol>
            <li v-for="s in apiErrors" :key="s">
@@ -7,14 +7,12 @@
            </li>
          </ol>
        </div>
+       
+        <h1 style="text-align:center;">Create user</h1>
+      
         <div class="card">
             <div class="card-content">
                 <div class="content">
-                   <div class="is-hcentered" style="text-align:center; margin:3%;">
-                    <!--<figure class="image is-96x96">
-                            <img  alt="logo" :src="photo">
-                        </figure> -->
-
                         <b-field label="Photo"
                                 :message="errors.file">
                                 <b-input type="file"
@@ -78,7 +76,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 <script>
 import api from '../api/http'
@@ -99,7 +96,7 @@ export default {
                 photoUrl:null,
                 email:null,
                 surname:null,
-                errors:{"email":null,"surname":null}
+                errors:{"email":null,"surname":null,"name":null,"age":null,"file":null}
             }
         },
         methods: {
@@ -179,7 +176,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .login{
+  .create{
       max-width:35%;
       margin-top:5%;
       margin-left: auto;

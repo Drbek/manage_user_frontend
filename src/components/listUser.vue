@@ -1,7 +1,7 @@
 <template>
 <div class="content">
     <div >
-        <h1>On avance à petit pas!!!</h1>
+        <h1 style="text-align:center;">List of users</h1>
 
     </div> 
     <b-loading :is-full-page="isFullPage" v-model="isLoading" :can-cancel="true"></b-loading>

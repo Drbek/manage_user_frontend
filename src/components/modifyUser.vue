@@ -1,12 +1,13 @@
 <template>
-    <div class="login">
+    <div class="update">
     <div class="box has-background-danger" v-if="apiErrors.length!=0">
-         <ol>
-           <li v-for="s in apiErrors" :key="s">
-           {{s}}
-           </li>
-         </ol>
-       </div>
+        <ol>
+           <li v-for="s in apiErrors" :key="s">{{s}}</li>
+        </ol>
+    </div>
+    <div >
+        <h1 style="text-align:center;">Update user</h1>
+    </div> 
         <div class="card">
             <div class="card-content">
                 <div class="content">
@@ -105,7 +106,7 @@ export default {
                 photoUrl:this.$route.params.user.photoUrl,
                 email:this.$route.params.user.email,
                 surname:this.$route.params.user.surname,
-                errors:{"email":null,"surname":null}
+                errors:{"email":null,"surname":null,"name":null,"age":null}
             }
         },
         mounted() {
@@ -191,7 +192,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .login{
+  .update{
       max-width:35%;
       margin-top:8%;
       margin-left: auto;
