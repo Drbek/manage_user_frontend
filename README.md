@@ -1,4 +1,4 @@
-# bekpixcam
+# manage_user_frontend
 
 ## Project setup
 ```
